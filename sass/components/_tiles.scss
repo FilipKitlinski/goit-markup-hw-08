@@ -1,0 +1,55 @@
+.tiles_section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+
+  &__table {
+    border: 1px solid $almostWhiteColor;
+  }
+  &__table:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-duration: 250ms;
+    transition-property: box-shadow;
+  }
+  &__modal {
+    position: relative;
+    overflow: hidden;
+  }
+  &__desription {
+    background-color: $porfolioHiddenTablesColor;
+    width: 100%;
+    height: 100%;
+    color: $whiteColor;
+    font-family: $robotoFontFamily;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    position: absolute;
+    bottom: -100%;
+    transition: 250ms;
+    padding: 49px 45px 49px 24px;
+  }
+
+  &__table:hover &__desription {
+    bottom: 0px;
+  }
+  &__reustarants_name {
+    padding: 20px 24px 2px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+  }
+  &__specification {
+    padding: 2px 24px 20px 24px;
+    color: $greyColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+  }
+}

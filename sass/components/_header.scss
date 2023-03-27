@@ -1,0 +1,108 @@
+header {
+  border-bottom: 1px solid $headerBorderColor;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $whiteColor;
+  font-weight: 500;
+  padding: 24px 0;
+
+  &__nav,
+  .navigation,
+  .contact {
+    display: flex;
+    align-items: center;
+  }
+}
+.navigation *,
+.contact * {
+  display: none;
+}
+.logo {
+  font-family: $ralewayFontFamily;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: $hoverColor;
+  text-decoration: none;
+
+  &__accent {
+    color: #000;
+  }
+}
+.navigation {
+  margin-left: 93px;
+  column-gap: 46px;
+
+  &__link--underline::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 4px;
+    border-radius: 2px;
+    top: 76px;
+    background-color: $hoverColor;
+  }
+  &__link {
+    color: #212121;
+    text-decoration: none;
+  }
+  &__link:hover {
+    color: $hoverColor;
+    transition-duration: 250ms;
+    transition-property: color;
+  }
+}
+
+.contact {
+  column-gap: 50px;
+  fill: $greyColor;
+
+  &__link {
+    color: $greyColor;
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+      fill: $hoverColor;
+      transition-duration: 250ms;
+      transition-property: color, fill;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  header {
+    padding: 25px 0;
+  }
+  .navigation *,
+  .contact * {
+    display: flex;
+    align-items: center;
+  }
+  .contact {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    padding: 25px 0;
+  }
+  .navigation *,
+  .contact * {
+    display: flex;
+    align-items: center;
+  }
+}
+@media not (min-width: 768px) {
+  header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

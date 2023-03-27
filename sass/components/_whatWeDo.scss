@@ -1,0 +1,34 @@
+.section--zero-padding-top {
+  display: none;
+  // padding: 0 15px;
+}
+.what_we_do_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+
+  &__photo {
+    position: relative;
+  }
+  &__description {
+    background-color: $whatWeDoBgColor;
+    font-family: $robotoFontFamily;
+    font-weight: 700;
+    font-size: 14px;
+    color: $whiteColor;
+    position: absolute;
+    inset: 224px 0 4px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 22px;
+    z-index: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) {
+  .section--zero-padding-top {
+    display: flex;
+  }
+}
