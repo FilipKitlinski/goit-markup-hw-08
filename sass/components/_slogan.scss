@@ -40,3 +40,17 @@
     line-height: 42px;
   }
 }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .slogan {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/people-in-workx2.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    color: $whiteColor;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 200px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -45,6 +45,21 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -106,28 +121,37 @@
           <ul class="what_we_do_section">
             <li class="what_we_do_section__photo">
               <img
-                src="images/writing-on-tablet.png"
+                src="images/writing-on-tablet.jpg"
                 alt="writing On Tablet"
                 width="370"
                 height="294"
+                srcset="images/writing-on-tabletx2.jpg 740w, images/writing-on-tablet.jpg 370w"
+                sizes="370px"
               />
               <p class="what_we_do_section__description">APLIKACJE KOMPUTEROWE</p>
             </li>
             <li class="what_we_do_section__photo">
               <img
-                src="images/using-talet-and-mobilephone.png"
+                src="images/using-talet-and-mobilephone.jpg"
                 alt="using Talet And Mobilephone"
                 width="370"
                 height="294"
+                srcset="
+                  images/using-talet-and-mobilephonex2.jpg 740w,
+                  images/using-talet-and-mobilephone.jpg   370w
+                "
+                sizes="370px"
               />
               <p class="what_we_do_section__description">APLIKACJE MOBILNE</p>
             </li>
             <li class="what_we_do_section__photo">
               <img
-                src="images/colours-on-tablet.png"
+                src="images/colours-on-tablet.jpg"
                 alt="colours On Tablet"
                 width="370"
                 height="294"
+                srcset="images/colours-on-tabletx2.jpg 740w, images/colours-on-tablet.jpg 370w"
+                sizes="370px"
               />
               <p class="what_we_do_section__description">ROZWIĄZANIA GRAFICZNE</p>
             </li>
@@ -145,6 +169,8 @@
                 alt="worker 1"
                 width="270"
                 height="260"
+                srcset="images/worker-1x2.jpg 740w, images/worker-1.jpg 370w"
+                sizes="370px"
               />
               <h3 class="card__name">John Doe</h3>
               <p class="card__position">Product Designer</p>
@@ -172,7 +198,14 @@
               </ul>
             </li>
             <li class="card">
-              <img src="images/worker-2.jpg" alt="worker 2" width="270" height="260" />
+              <img
+                src="images/worker-2.jpg"
+                alt="worker 2"
+                width="270"
+                height="260"
+                srcset="images/worker-2x2.jpg 740w, images/worker-2.jpg 370w"
+                sizes="370px"
+              />
               <h3 class="card__name">John Doe</h3>
               <p class="card__position">Frontend Developer</p>
               <ul class="card__icons">
@@ -199,7 +232,14 @@
               </ul>
             </li>
             <li class="card">
-              <img src="images/worker-3.jpg" alt="worker 3" width="270" height="260" />
+              <img
+                src="images/worker-3.jpg"
+                alt="worker 3"
+                width="270"
+                height="260"
+                srcset="images/worker-3x2.jpg 740w, images/worker-3.jpg 370w"
+                sizes="370px"
+              />
               <h3 class="card__name">John Doe</h3>
               <p class="card__position">Marketing</p>
               <ul class="card__icons">
@@ -226,7 +266,14 @@
               </ul>
             </li>
             <li class="card">
-              <img src="images/worker-4.jpg" alt="worker 4" width="270" height="260" />
+              <img
+                src="images/worker-4.jpg"
+                alt="worker 4"
+                width="270"
+                height="260"
+                srcset="images/worker-4x2.jpg 740w, images/worker-4.jpg 370w"
+                sizes="370px"
+              />
               <h3 class="card__name">John Doe</h3>
               <p class="card__position">UI Designer</p>
               <ul class="card__icons">
@@ -418,5 +465,81 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <!-- <script src="./js/mobile-menu.js"></script> -->
+    <div class="mobile_menu container">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <nav class="mobile_menu__nav">
+        <ul class="mobile_navigation">
+          <li>
+            <a class="mobile_navigation__link" href="./index.html">Agencja</a>
+          </li>
+          <li><a class="mobile_navigation__link" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="mobile_navigation__link" href="">Kontakt</a></li>
+        </ul>
+      </nav>
+      <ul class="mobile_contact">
+        <li>
+          <a class="mobile_contact__link--hovered" href="tel:+48111111111"> +48 111 111 111</a>
+        </li>
+        <li>
+          <a class="mobile_contact__link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile_media">
+        <li>
+          <a class="mobile_media__link" href="">Instagram</a>
+        </li>
+        <li>
+          <div
+            class="mobile_media__border"
+            style="border-left: 1px solid #21212133; height: 22px; width: 0"
+          ></div>
+        </li>
+        <li>
+          <a class="mobile_media__link" href="">Twitter</a>
+        </li>
+        <li>
+          <div
+            class="mobile_media__border"
+            style="border-left: 1px solid #21212133; height: 22px; width: 0"
+          ></div>
+        </li>
+        <li></li>
+        <li>
+          <a class="mobile_media__link" href="">Facebook</a>
+        </li>
+        <li>
+          <div
+            class="mobile_media__border"
+            style="border-left: 1px solid #21212133; height: 22px; width: 0"
+          ></div>
+        </li>
+        <li></li>
+        <li>
+          <a class="mobile_media__link" href="">Linkedin</a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
